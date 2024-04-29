@@ -3,7 +3,6 @@
 #include <string.h>
 
 int strVerify(char *input, int *letras, int *pontos){
-
 	/* Retorna quantas letras e     */
 	/* pontos existem em uma string */
 	
@@ -34,7 +33,6 @@ int strVerify(char *input, int *letras, int *pontos){
 }
 
 void typeCast(char *input, char *output){
-
 	/* Verifica a possibilidade de  */
 	/* cast de um input (string)    */
 	/* e armazena em um output      */
@@ -45,12 +43,12 @@ void typeCast(char *input, char *output){
 	strVerify(input, &erros, &pontos);
 	
 	if(pontos == 1 && erros == 0){
-		strcpy(output,"float");
+		strcpy(output,"flutuante");
 	}
 	else if(pontos < 1 && erros == 0){
-		strcpy(output,"int");
+		strcpy(output,"inteiro");
 	}
 	else{
-		strcpy(output,"other");
+		strcpy(output,"outro");
 	}
 }
